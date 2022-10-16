@@ -27,8 +27,8 @@
       "unique": true,
       "required": true
     },
-    "userEmail": {
-      "type": "email",
+    "userId": {
+      "type": "string",
       "required": true
     }
   }

@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "userEmail": {
-      "type": "email",
-      "required": true
-    },
     "orderId": {
       "type": "uid",
       "required": true
@@ -41,6 +37,10 @@
       "required": true
     },
     "status": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
       "type": "string",
       "required": true
     }
