@@ -4,18 +4,14 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "review"
+    "displayName": "review",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "userId": {
-      "type": "string",
-      "unique": true,
-      "required": true
-    },
     "productId": {
       "type": "string",
       "unique": true,
@@ -29,6 +25,10 @@
     "text": {
       "type": "text",
       "unique": true,
+      "required": true
+    },
+    "userEmail": {
+      "type": "email",
       "required": true
     }
   }
