@@ -30,6 +30,20 @@
     "userId": {
       "type": "string",
       "required": true
+    },
+    "userName": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
