@@ -68,6 +68,11 @@
       ],
       "required": true,
       "default": "daily"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }
