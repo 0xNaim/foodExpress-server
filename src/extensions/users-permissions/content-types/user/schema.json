@@ -72,6 +72,12 @@
       "type": "password",
       "required": true,
       "minLength": 6
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile",
+      "inversedBy": "users_permissions_users"
     }
   }
 }
