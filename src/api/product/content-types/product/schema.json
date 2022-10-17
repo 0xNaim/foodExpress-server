@@ -44,18 +44,6 @@
       "required": true,
       "unique": false
     },
-    "daily": {
-      "type": "boolean",
-      "required": true
-    },
-    "monthly": {
-      "type": "boolean",
-      "required": true
-    },
-    "safeFood": {
-      "type": "boolean",
-      "required": true
-    },
     "offer": {
       "type": "boolean",
       "required": true
@@ -66,10 +54,20 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "size": {
+    "weight": {
       "type": "string",
       "required": true,
       "unique": false
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "daily",
+        "monthly",
+        "safeFood"
+      ],
+      "required": true,
+      "default": "daily"
     }
   }
 }
