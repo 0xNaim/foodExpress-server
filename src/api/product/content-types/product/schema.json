@@ -39,11 +39,6 @@
       "type": "decimal",
       "unique": false
     },
-    "stoke": {
-      "type": "integer",
-      "required": true,
-      "unique": false
-    },
     "offer": {
       "type": "boolean",
       "required": true
@@ -73,6 +68,10 @@
       "relation": "manyToOne",
       "target": "api::sub-category.sub-category",
       "inversedBy": "products"
+    },
+    "stoke": {
+      "type": "string",
+      "required": true
     }
   }
 }
