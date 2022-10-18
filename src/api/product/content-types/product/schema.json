@@ -30,12 +30,12 @@
         "images"
       ]
     },
-    "regularPrice": {
+    "sellPrice": {
       "type": "decimal",
       "unique": false,
       "required": true
     },
-    "sellPrice": {
+    "regularPrice": {
       "type": "decimal",
       "unique": false
     },
