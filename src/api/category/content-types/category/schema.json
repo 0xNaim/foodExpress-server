@@ -17,16 +17,16 @@
       "required": true,
       "unique": true
     },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product",
-      "mappedBy": "category"
-    },
     "slug": {
       "type": "uid",
       "targetField": "categoryName",
       "required": true
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-category.sub-category",
+      "mappedBy": "category"
     }
   }
 }

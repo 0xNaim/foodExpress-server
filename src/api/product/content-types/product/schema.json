@@ -48,12 +48,6 @@
       "type": "boolean",
       "required": true
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
     "weight": {
       "type": "string",
       "required": true,
@@ -73,6 +67,12 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "sub_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "products"
     }
   }
 }
