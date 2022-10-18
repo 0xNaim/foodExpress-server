@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
@@ -26,6 +23,15 @@
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "sub_category"
+    },
+    "subCategoryName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "subCategoryName",
+      "required": true
     }
   }
 }
