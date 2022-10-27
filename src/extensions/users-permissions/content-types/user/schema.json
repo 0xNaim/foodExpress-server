@@ -84,6 +84,12 @@
       "relation": "manyToMany",
       "target": "api::order.order",
       "inversedBy": "users_permissions_users"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "users_permissions_users"
     }
   }
 }
