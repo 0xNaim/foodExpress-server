@@ -78,6 +78,12 @@
       "relation": "manyToOne",
       "target": "api::profile.profile",
       "inversedBy": "users_permissions_users"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "inversedBy": "users_permissions_users"
     }
   }
 }
