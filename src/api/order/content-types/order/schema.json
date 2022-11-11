@@ -27,20 +27,23 @@
     "checkout_session": {
       "type": "string"
     },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "orders"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "orders"
     },
-    "shipping": {
+    "items": {
       "type": "json"
+    },
+    "shippingAddress": {
+      "type": "json"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "orders"
     }
   }
 }
