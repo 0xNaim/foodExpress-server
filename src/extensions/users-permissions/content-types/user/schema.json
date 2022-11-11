@@ -83,7 +83,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::order.order",
-      "inversedBy": "users_permissions_users"
+      "mappedBy": "users_permissions_users"
     },
     "cart": {
       "type": "relation",
