@@ -79,17 +79,17 @@
       "target": "api::profile.profile",
       "inversedBy": "users_permissions_users"
     },
-    "orders": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::order.order",
-      "mappedBy": "users_permissions_users"
-    },
     "cart": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::cart.cart",
       "inversedBy": "users_permissions_users"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "user"
     }
   }
 }

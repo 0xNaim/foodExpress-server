@@ -12,36 +12,35 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "amount": {
-      "type": "decimal",
-      "required": true
-    },
-    "users_permissions_users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "orders"
-    },
-    "items": {
-      "type": "json",
-      "required": true
-    },
-    "email": {
-      "type": "email",
-      "required": true
-    },
-    "shipping": {
-      "type": "json",
-      "required": true
-    },
     "status": {
       "type": "enumeration",
       "enum": [
-        "unpaid",
-        "paid"
+        "paid",
+        "unpaid"
       ],
-      "default": "unpaid",
-      "required": true
+      "required": false,
+      "default": "unpaid"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "checkout_session": {
+      "type": "string"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "orders"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "shipping": {
+      "type": "json"
     }
   }
 }
