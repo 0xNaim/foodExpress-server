@@ -11,7 +11,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
     const { user } = ctx.state;
-    const { items, total, shippingAddress, token } = ctx.request.body;
+    const { items, amount, shippingAddress, token } = ctx.request.body;
 
     console.log(ctx.request.body);
 
@@ -29,7 +29,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       user: user.email,
       order_id: shortid.generate(),
       items,
-      total,
+      amount: stripeAmount,
       shippingAddress,
     });
 
