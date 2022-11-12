@@ -13,24 +13,23 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     const { user } = ctx.state;
     const { items, amount, shippingAddress, token } = ctx.request.body;
 
-    console.log(ctx.request.body);
-
-    const stripeAmount = Math.floor(amount * 100);
     await stripe.charges.create({
       // Transform cents to dollars
-      amount: stripeAmount,
+      amount,
       currency: "usd",
       source: token,
       description: `Order ${new Date()} by ${ctx.state.user._id}`,
     });
 
     // Register the order in the database
-    const order = await strapi.services.order.create.create({
-      user: user.email,
-      order_id: shortid.generate(),
-      items,
-      amount: stripeAmount,
-      shippingAddress,
+    const order = await strapi.db.query("api::order.order").create({
+      data: {
+        user: user.id,
+        order_id: shortid.generate(),
+        items,
+        amount,
+        shippingAddress,
+      },
     });
 
     return order;
