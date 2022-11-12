@@ -15,11 +15,11 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "paid",
-        "unpaid"
+        "pending",
+        "delivered"
       ],
       "required": false,
-      "default": "unpaid"
+      "default": "pending"
     },
     "total": {
       "type": "decimal"
@@ -39,11 +39,10 @@
     "shippingAddress": {
       "type": "json"
     },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "orders"
+    "order_id": {
+      "type": "string",
+      "required": false,
+      "unique": true
     }
   }
 }

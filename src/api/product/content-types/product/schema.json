@@ -72,12 +72,6 @@
     "stoke": {
       "type": "string",
       "required": true
-    },
-    "orders": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::order.order",
-      "mappedBy": "product"
     }
   }
 }
