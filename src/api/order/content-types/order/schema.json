@@ -24,9 +24,6 @@
     "amount": {
       "type": "decimal"
     },
-    "checkout_session": {
-      "type": "string"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
