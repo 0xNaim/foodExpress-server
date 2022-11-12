@@ -15,7 +15,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     try {
       await stripe.charges.create({
         // Transform cents to dollars
-        amount,
+        amount: Math.floor(amount * 100),
         currency: "usd",
         source: token,
         description: `Order ${new Date()} by ${user.email}`,
