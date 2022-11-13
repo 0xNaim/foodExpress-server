@@ -25,6 +25,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       const order = await strapi.db.query("api::order.order").create({
         data: {
           user: user.id,
+          user_email: user.email,
           order_id: shortid.generate(),
           items,
           amount,

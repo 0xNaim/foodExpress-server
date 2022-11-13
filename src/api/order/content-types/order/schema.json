@@ -40,6 +40,9 @@
       "type": "string",
       "required": false,
       "unique": true
+    },
+    "user_email": {
+      "type": "email"
     }
   }
 }
