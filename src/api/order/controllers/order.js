@@ -29,6 +29,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
           items,
           amount,
           shippingAddress,
+          publishedAt: new Date(),
         },
       });
 
