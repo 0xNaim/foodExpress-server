@@ -90,6 +90,12 @@
       "relation": "oneToMany",
       "target": "api::order.order",
       "mappedBy": "user"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
