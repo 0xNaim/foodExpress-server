@@ -14,7 +14,6 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 
     try {
       await stripe.charges.create({
-        // Transform cents to dollars
         amount,
         currency: "usd",
         source: token,

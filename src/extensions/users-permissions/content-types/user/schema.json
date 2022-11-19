@@ -73,18 +73,6 @@
       "required": true,
       "minLength": 6
     },
-    "profile": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::profile.profile",
-      "inversedBy": "users_permissions_users"
-    },
-    "cart": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::cart.cart",
-      "inversedBy": "users_permissions_users"
-    },
     "orders": {
       "type": "relation",
       "relation": "oneToMany",
