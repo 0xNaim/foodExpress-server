@@ -72,6 +72,9 @@
     "stoke": {
       "type": "string",
       "required": true
+    },
+    "discountPrice": {
+      "type": "decimal"
     }
   }
 }
