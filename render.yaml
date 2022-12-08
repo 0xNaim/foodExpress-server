@@ -6,9 +6,10 @@ services:
     buildCommand: yarn install && yarn build
     startCommand: yarn start
     healthCheckPath: /_health
+    autoDeploy: false
     envVars:
       - key: NODE_VERSION
-        value: 18.12.1
+        value: ~16.13.0
       - key: NODE_ENV
         value: production
       - key: CLOUDINARY_NAME
@@ -26,8 +27,6 @@ services:
       - key: ADMIN_JWT_SECRET
         generateValue: true
       - key: APP_KEYS
-        generateValue: true
-      - key: API_TOKEN_SALT
         generateValue: true
 
 databases:
