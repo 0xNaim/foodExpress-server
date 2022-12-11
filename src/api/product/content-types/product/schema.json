@@ -39,10 +39,6 @@
       "type": "decimal",
       "unique": false
     },
-    "offer": {
-      "type": "boolean",
-      "required": true
-    },
     "weight": {
       "type": "string",
       "required": true,
